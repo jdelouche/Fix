@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0ffaf19ad3cf7cf40e13dc89f27d3b6d6a3c5560bd118e360babc8a59d7b99dd
+-- hash: 5f55c7b0a3aa61edc9c1fa8e8ba9342b091b62e89689707910a7972a4862b72e
 
 name:           Fix
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/Fix#readme>
-homepage:       https://github.com/githubuser/Fix#readme
-bug-reports:    https://github.com/githubuser/Fix/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
+description:    Please see the README on GitHub at <https://github.com/jdelouche/Fix#readme>
+homepage:       https://github.com/jdelouche/Fix#readme
+bug-reports:    https://github.com/jdelouche/Fix/issues
+author:         Jean-Pierre Delouche
+maintainer:     jdelouche@gmail.com
+copyright:      2020 Jean-Pierre Delouche
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/Fix
+  location: https://github.com/jdelouche/Fix
 
 library
   exposed-modules:
@@ -52,6 +52,7 @@ test-suite Fix-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Setup
       Paths_Fix
   hs-source-dirs:
       test
