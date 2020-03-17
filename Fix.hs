@@ -23,29 +23,35 @@ showType
 showType s n f = printf ("%"++(show s)++"s :: %s") n (show (typeOf f))
 showFunction :: Integer -> String -> IO ()
 showFunction l n = do
+    let m = truncate $ fromRational $ (toRational (length n)) / 2
     printf ("%"++(show l)++"s\n") "|"
-    printf ("%"++(show l)++"s\n") n
+    printf ("%"++(show (l+m))++"s\n") n
     printf ("%"++(show l)++"s\n") "|"
     printf ("%"++(show l)++"s\n") "V"
 main :: IO ()
 main      = do
     let a = [2..10]
+    let pad =  85
     putStr          "                                                                    a =  "
     print                                                                                a
     putStr          "                                                                    a ::          "
     print $ typeOf $                                                                     a
-    showFunction 85 "coalg"
+    showFunction pad                                                                "coalg"
     putStr          "                                                                coalg :: "
     print $ typeOf $                                                                 coalg
-    showFunction 85 "(fmap (ana coalg))"
+    showFunction pad                                           "(fmap (ana coalg))"
     putStr          "                                           (fmap (ana coalg)) . coalg :: "
     print $ typeOf $                                            (fmap (ana coalg)) . coalg
+    showFunction pad                                      "Fx"
     putStr          "                                      Fx . (fmap (ana coalg)) . coalg :: "
     print $ typeOf $                                       Fx . (fmap (ana coalg)) . coalg
+    showFunction pad                              "unFix"
     putStr          "                              unFix . Fx . (fmap (ana coalg)) . coalg :: "
     print $ typeOf $                               unFix . Fx . (fmap (ana coalg)) . coalg
+    showFunction pad          "(fmap (cata alg))"
     putStr          "          (fmap (cata alg)) . unFix . Fx . (fmap (ana coalg)) . coalg :: "
     print $ typeOf $           (fmap (cata alg)) . unFix . Fx . (fmap (ana coalg)) . coalg
+    showFunction pad    "alg"
     putStr          "    alg . (fmap (cata alg)) . unFix . Fx . (fmap (ana coalg)) . coalg :: "
     print $ typeOf $     alg . (fmap (cata alg)) . unFix . Fx . (fmap (ana coalg)) . coalg
     putStr          "                                             (cata alg) . (ana coalg) :: "
