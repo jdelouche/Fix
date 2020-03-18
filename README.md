@@ -5,8 +5,15 @@ https://bartoszmilewski.com/2017/02/28/f-algebras/
 
 This seems to be complicated, but finding prime numbers, only requires one *single* line change based on Erathostene's filters compared to a simple identity.
 
+The identity:
+
     coalg (p : ns)    =  StreamF p ns
+    
+Erathostene's filters
+
     coalg (p : ns)    =  StreamF p (filter (notdiv p) ns) where notdiv p n = n `mod` p /= 0
+    
+It is amazing to get such a powerful result with so little constomization.
 
 
                                                                         a =  [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
