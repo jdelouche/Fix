@@ -19,7 +19,7 @@ This is based on the fixed point of F-Albegras :
 
     data Fix f = Fx (f (Fix f))
     
-This system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamaorphism. The mechanism allows to write inductive programs with no recusrive calls thanks to the use of the functorial fixed point. Programs are so easy to write that I decided to use this paradigm extensively in my pet project of [text musical notation](https://github.com/jdelouche/hmusic) and also to [monitor cpu activity on Linux](https://github.com/jdelouche/hproc).
+This system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamaorphism. The mechanism allows to write inductive programs with no recusrive calls thanks to the use of the functorial fixed point. Programs are so easy to write that I decided to use this paradigm extensively in my pet project of [text musical notation](https://github.com/jdelouche/hmusic) and also to [monitor cpu activity on Linux](https://github.com/jdelouche/hproc/blob/master/src/Hproc/Hproc.hs).
 
 Find below a description of the types used in this example:
 
