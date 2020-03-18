@@ -13,7 +13,15 @@ Erathostene's filters
 
     coalg (p : ns)    =  StreamF p (filter (notdiv p) ns) where notdiv p n = n `mod` p /= 0
     
-It is amazing to get such a powerful result with so little constomization.
+It is amazing to have such a powerful result with so little customization of a general principle.
+
+This is based on the fixed point of F-Albegras :
+
+    data Fix f = Fx (f (Fix f))
+    
+This system is also using a hylomorphism, which is a composition of anamorphism followed by a catamaorphism. The mechanism allow to make programs in inductive form with no recusrive calls since by the use of the fixed point.
+
+Find below a description of the tyep used in the example:
 
 
                                                                         a =  [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
