@@ -1,5 +1,5 @@
 {-# LANGUAGE DeriveFunctor #-}
---  https://bartoszmilewski.com/2017/02/28/f-algebras/
+--  Ref to https://bartoszmilewski.com/2017/02/28/f-algebras/
 import Prelude
 import Data.Typeable
 import Text.Printf
@@ -35,6 +35,7 @@ showRes l n = do
     printf ("%"++(show (l+m))++"s\n") n
 main :: IO ()
 main      = do
+    putStrLn "-- Ref to  https://bartoszmilewski.com/2017/02/28/f-algebras/"
     let a = [2..15]
     let pad =  85
     putStr          "                                                                    a =  "
