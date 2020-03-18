@@ -19,9 +19,9 @@ This is based on the fixed point of F-Albegras :
 
     data Fix f = Fx (f (Fix f))
     
-This system is also using a hylomorphism, which is a composition of anamorphism followed by a catamaorphism. The mechanism allow to make programs in inductive form with no recusrive calls since by the use of the fixed point.
+This system is using a hylomorphism, a composition of an anamorphism and a catamaorphism. The mechanism allows to write inductive programs with no recusrive calls thanks to the use of the functorial fixed point.
 
-Find below a description of the tyep used in the example:
+Find below a description of the types used in this example:
 
 
                                                                         a =  [2,3,4,5,6,7,8,9,10,11,12,13,14,15]
