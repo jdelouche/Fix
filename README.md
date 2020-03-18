@@ -1,6 +1,6 @@
 # Fix
 
-Fix.hs aims at showing the mechanics of the types of F-Algebras based on an example given in the following presentation:
+Fix.hs aims at showing the mechanics of the types of [F-Algebras](https://en.wikipedia.org/wiki/F-algebra) based on an example given in the following presentation:
 https://bartoszmilewski.com/2017/02/28/f-algebras/
 
 This seems to be complicated, but finding prime numbers, only requires one *single* line change based on Erathostene's filters compared to a simple identity.
@@ -19,7 +19,7 @@ This is based on the fixed point of F-Albegras :
 
     data Fix f = Fx (f (Fix f))
     
-This system is using a hylomorphism, a composition of an anamorphism and a catamaorphism. The mechanism allows to write inductive programs with no recusrive calls thanks to the use of the functorial fixed point.
+This system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamaorphism. The mechanism allows to write inductive programs with no recusrive calls thanks to the use of the functorial fixed point.
 
 Find below a description of the types used in this example:
 
