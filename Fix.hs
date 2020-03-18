@@ -37,10 +37,10 @@ main :: IO ()
 main      = do
     putStrLn "-- Ref to  https://bartoszmilewski.com/2017/02/28/f-algebras/"
     let a = [2..15]
-    let pad =  85
+    let pad =  90
     putStr          "                                                                    a =  "
     print                                                                                a
-    putStr          "                                                                    a ::          "
+    putStr          "                                                                         a ::          "
     print $ typeOf $                                                                     a
     showFunction pad                                                                "coalg"
     showRes pad (show (coalg a))
