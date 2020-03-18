@@ -9,7 +9,7 @@ The identity:
 
     coalg (p : ns)    =  StreamF p ns
     
-Erathostene's filters
+[Erathostene's filters](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 
     coalg (p : ns)    =  StreamF p (filter (notdiv p) ns) where notdiv p n = n `mod` p /= 0
     
