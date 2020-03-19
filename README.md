@@ -19,7 +19,7 @@ And this is solely based on the fixed point of F-Albegras :
 
     data Fix f = Fx (f (Fix f))
     
-A fixed point for functions is determined by the equation : x = f x, for algebraic data types, it is proposed the above.
+In comparison, a fixed point for functions is determined by the equation : x = f x, for algebraic data types, it is proposed the above.
 
 The system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamorphism. This mechanism surprisingly allows to write inductive programs with no recusrive calls, thanks to the use of the struture of the fixed point.
 
