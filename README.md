@@ -23,9 +23,7 @@ This system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism
 
 Programs are so easy to write that I decided to use this paradigm extensively in my pet project of [text musical notation](https://github.com/jdelouche/hmusic/blob/master/src/Data/Amp/Music/Midi/Midi.hs) and also to [monitor cpu activity on Linux](https://github.com/jdelouche/hproc/blob/master/src/Hproc/Hproc.hs).
 
-Another point of simplification is that it does not use the much feared and cumbersome Monads, only function compositions.
-
-No monads ! Except some functors not havving deconstrution data types like the IO Monad.
+No monads ! Another point of simplification is that it does not use the much feared and cumbersome Monads, only function compositions. Except for some functors not havving deconstrution data types like the IO Monad, of course.
 
 Find below a description of the types used in this example:
 
