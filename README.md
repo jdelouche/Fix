@@ -21,7 +21,7 @@ And this is solely based on the fixed point of F-Albegras :
     
 In comparison, a fixed point for functions is determined by the equation : x = f x. For algebraic data types, it is proposed the above.
 
-The system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamorphism. This mechanism surprisingly allows to write inductive programs with no recusrive calls, thanks to the use of the recursive struture of the fixed point.
+The system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamorphism. This mechanism surprisingly allows to write inductive programs with no recusrive calls, thanks to the use of the recursive structure of the fixed point.
 
 Programs are so easy to write that I decided to use this paradigm extensively in my pet project of [text musical notation](https://github.com/jdelouche/hmusic/blob/master/src/Data/Amp/Music/Midi/Midi.hs) and also to [monitor cpu activity on Linux](https://github.com/jdelouche/hproc/blob/master/src/Hproc/Hproc.hs).
 
