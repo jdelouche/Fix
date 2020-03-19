@@ -3,7 +3,7 @@
 [Fix.hs](https://github.com/jdelouche/Fix/blob/master/Fix.hs) aims at showing the mechanics of the types of [F-Algebras](https://en.wikipedia.org/wiki/F-algebra) based on an example given in the following presentation:
 https://bartoszmilewski.com/2017/02/28/f-algebras/
 
-This seems to be complicated, but finding prime numbers, only requires one *single* line change based on Erathostene's filters compared to a simple identity.
+This seems to be complicated, but finding prime numbers, only requires *one single line* change, based on Erathostene's filters and compared to a simple identity.
 
 The identity:
 
@@ -19,9 +19,13 @@ This is based on the fixed point of F-Albegras :
 
     data Fix f = Fx (f (Fix f))
     
-This system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamaorphism. The mechanism allows to write inductive programs with no recusrive calls thanks to the use of the functorial fixed point. Programs are so easy to write that I decided to use this paradigm extensively in my pet project of [text musical notation](https://github.com/jdelouche/hmusic/blob/master/src/Data/Amp/Music/Midi/Midi.hs) and also to [monitor cpu activity on Linux](https://github.com/jdelouche/hproc/blob/master/src/Hproc/Hproc.hs).
+This system is using a [hylomorphism](https://en.wikipedia.org/wiki/Hylomorphism_(computer_science)), a composition of an anamorphism and a catamorphism. This mechanism surprisingly allows to write inductive programs with no recusrive calls, thanks to the use of the struture of a functorial fixed point.
 
-Another point of simplification is that it does not use the feared Monads. No monad at all ! Except for the IO Monad which has no deconstrution data constructor anyhow.
+Programs are so easy to write that I decided to use this paradigm extensively in my pet project of [text musical notation](https://github.com/jdelouche/hmusic/blob/master/src/Data/Amp/Music/Midi/Midi.hs) and also to [monitor cpu activity on Linux](https://github.com/jdelouche/hproc/blob/master/src/Hproc/Hproc.hs).
+
+Another point of simplification is that it does not use the much feared and cumbersome Monads, only function compositions.
+
+No monads ! Except some functors not havving deconstrution data types like the IO Monad.
 
 Find below a description of the types used in this example:
 
