@@ -1,6 +1,6 @@
 # Fix
 
-Fix.hs aims at showing the mechanics of the types of [F-Algebras](https://en.wikipedia.org/wiki/F-algebra) based on an example given in the following presentation:
+[Fix.hs](https://github.com/jdelouche/Fix/blob/master/Fix.hs) aims at showing the mechanics of the types of [F-Algebras](https://en.wikipedia.org/wiki/F-algebra) based on an example given in the following presentation:
 https://bartoszmilewski.com/2017/02/28/f-algebras/
 
 This seems to be complicated, but finding prime numbers, only requires one *single* line change based on Erathostene's filters compared to a simple identity.
